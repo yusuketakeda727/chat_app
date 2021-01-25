@@ -58,3 +58,5 @@ gem 'devise'
 # この記述の後にターミナルで bundle install する。※ rails の記述は不要。
 # サーバーの再起動を行う
 # ターミナルで rails g devise:install を実行する
+
+gem 'pry-rails'   #　アプリを一時停止して値を確認したい時に使うGem
