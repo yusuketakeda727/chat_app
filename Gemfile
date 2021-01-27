@@ -60,3 +60,6 @@ gem 'devise'
 # ターミナルで rails g devise:install を実行する
 
 gem 'pry-rails'   #　アプリを一時停止して値を確認したい時に使うGem
+
+gem 'mini_magick'   #railsでImageMagickを使える様にするGem。
+gem 'image_processing', '~> 1.2'
