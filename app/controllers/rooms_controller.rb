@@ -7,7 +7,7 @@ class RoomsController < ApplicationController
     @room = Room.new
   end
 
-  def create    # 下記の記述でDBに値を保存できるようにする。
+  def create
     @room = Room.new(room_params)
     if @room.save
       redirect_to root_path
