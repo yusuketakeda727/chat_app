@@ -3,11 +3,11 @@ class RoomsController < ApplicationController
   def index
   end
 
-  def new   # ルームコントローラーの実装
+  def new
     @room = Room.new
   end
 
-  def create    # 下記の記述でDBに値を保存できるようにする。
+  def create
     @room = Room.new(room_params)
     if @room.save
       redirect_to root_path
@@ -16,9 +16,15 @@ class RoomsController < ApplicationController
     end
   end
 
+  def destroy
+    room = Room.find(params[:id])
+    room.destroy
+    redirect_to root_path
+  end
+
   private
 
   def room_params
-    params.require(:room).permit(:name, user_ids: [])
+    params.require(:room).permit(:name, user_ids:[])
   end
 end
